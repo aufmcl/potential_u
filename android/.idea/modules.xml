@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" group="android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="android/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1030067341/firebase_auth.iml" filepath="$PROJECT_DIR$/.idea/modules/-1030067341/firebase_auth.iml" group="android/firebase_auth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1434862663/firebase_core.iml" filepath="$PROJECT_DIR$/.idea/modules/1434862663/firebase_core.iml" group="android/firebase_core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1140935186/firebase_dynamic_links.iml" filepath="$PROJECT_DIR$/.idea/modules/-1140935186/firebase_dynamic_links.iml" group="android/firebase_dynamic_links" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/353537874/google_sign_in.iml" filepath="$PROJECT_DIR$/.idea/modules/353537874/google_sign_in.iml" group="android/google_sign_in" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2094028025/shared_preferences.iml" filepath="$PROJECT_DIR$/.idea/modules/2094028025/shared_preferences.iml" group="android/shared_preferences" />
+    </modules>
+  </component>
+</project>
