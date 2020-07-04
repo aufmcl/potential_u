@@ -1,3 +1,4 @@
+import 'package:potential_u/board_page.dart';
 import 'package:potential_u/request_page.dart';
 import 'package:flutter/material.dart';
 import 'list_page.dart';
@@ -31,6 +32,7 @@ Widget cardView(Icon icon, Color color, String title, String subtitle) {
     ),
   );
 }
+
 Widget btn_Add(BuildContext context) {
   return IconButton(
     icon: Icon(Icons.add),
@@ -45,6 +47,7 @@ Widget btn_Add(BuildContext context) {
     },
   );
 }
+
 Widget userProfile(String imageUrl) {
   return CircleAvatar(
     radius: 30.0,
@@ -57,6 +60,7 @@ Widget userProfile(String imageUrl) {
     backgroundColor: Colors.transparent,
   );
 }
+
 Widget drawer(BuildContext context) {
   return Drawer(
     child: ListView(
@@ -103,7 +107,12 @@ Widget drawer(BuildContext context) {
             '게시판',
             style: TextStyle(fontSize: 15),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BoardPage()),
+            );
+          },
         ),
       ],
     ),
