@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'FirstScreen.dart';
+import 'list_page.dart';
 import 'google_sign_in.dart';
 
 class LoginPage extends StatefulWidget {
@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {
-                return FirstScreen();
+                return ListPage();
               },
             ),
           );
