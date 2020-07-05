@@ -1,3 +1,4 @@
+import 'package:potential_u/add_page.dart';
 import 'package:potential_u/board_page.dart';
 import 'package:potential_u/request_page.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ Widget btn_Add(BuildContext context) {
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) {
-            return ListPage();
+            return AddPage();
           },
         ),
       );
