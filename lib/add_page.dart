@@ -7,6 +7,39 @@ class AddPage extends StatefulWidget {
 }
 
 class _AddPage extends State<AddPage> {
+//  final List<String> _classList = ['안드로이드', '웹', '임베디드', '디자인', '운동'];
+  //final List<DropdownItem> _classList = [DropdownItem('안드로이드', Icon(Icons.android)), DropdownItem('WEB', Icon(Icons.code))];
+
+  List<DropdownItem> _items = DropdownItem.getItem();
+  List<DropdownMenuItem<DropdownItem>> _classList;
+  DropdownItem _currentSelectedItem;
+
+  @override
+  void initState() {
+    _classList = buildDropdownMenuItems(_items);
+    _currentSelectedItem = _classList[1].value;
+    super.initState();
+  }
+
+  List<DropdownMenuItem<DropdownItem>> buildDropdownMenuItems(List _items) {
+    List<DropdownMenuItem<DropdownItem>> items = List();
+    for (DropdownItem item in _items) {
+      items.add(
+        DropdownMenuItem(
+          value: item,
+          child: Text(item.name),
+        ),
+      );
+    }
+    return items;
+  }
+
+  onChangeDropdownItem(DropdownItem selectedCompany) {
+    setState(() {
+      _currentSelectedItem = selectedCompany;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,11 +55,65 @@ class _AddPage extends State<AddPage> {
           )
         ],
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
-          DropdownButton(
+          Container(
+            margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+//            child: DropdownButton<DropdownItem>(
+//              isExpanded: true,
+//              items: _classList.map(
+//                    (val) {
+//                  return DropdownMenuItem<DropdownItem>(
+//                    value: _currentSelectedItem,
+//                    child: Row(
+//                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                      children: <Widget>[
+//                        _currentSelectedItem.icon,
+//                        Text(
+//                            _currentSelectedItem.name
+//                        ),
+//                      ],
+//                    ),
+//                  );
+//                },
+//              ).toList(),
+//              value: _currentSelectedItem,
+//              onChanged: (value) {
+//                setState(() {
+//                  _currentSelectedItem = value;
+//                });
+//              },
+//            ),
 
+            child: DropdownButton(
+              value: _currentSelectedItem,
+              items: _classList.map(
+                (val) {
+                  return DropdownMenuItem<DropdownItem>(
+                    value: val.value,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        val.value.icon,
+                        Text(val.value.name),
+                      ],
+                    ),
+                  );
+                },
+              ).toList(),
+              onChanged: onChangeDropdownItem,
+            ),
           ),
+
+          //TODO: Select Icon on DropdownButton
+//          DropdownButton<Icon>(
+//            value: Icon(Icons.android),
+//            //elevation: 16,
+//            underline: Container(
+//              height: 2,
+//              color: Colors.deepPurpleAccent,
+//            ),
+//          ),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
@@ -61,5 +148,23 @@ class _AddPage extends State<AddPage> {
         ],
       ),
     );
+  }
+}
+
+class DropdownItem {
+  String name;
+  Icon icon;
+  Color color;
+
+  DropdownItem(this.name, this.icon, this.color);
+
+  static List<DropdownItem> getItem() {
+    return <DropdownItem>[
+      DropdownItem('안드로이드', Icon(Icons.android), Colors.greenAccent),
+      DropdownItem('웹', Icon(Icons.code), Colors.blue),
+      DropdownItem('디자인', Icon(Icons.color_lens), Colors.orange),
+      DropdownItem('임베디드', Icon(Icons.memory), Colors.green),
+      DropdownItem('운동', Icon(Icons.directions_run), Colors.deepOrangeAccent),
+    ];
   }
 }

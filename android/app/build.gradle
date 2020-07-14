@@ -59,8 +59,8 @@ flutter {
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-analytics:17.4.3' // 추가
-    implementation 'com.google.firebase:firebase-auth:19.3.1' // 추가
+    implementation 'com.google.firebase:firebase-analytics:17.4.4' // 추가
+    implementation 'com.google.firebase:firebase-auth:19.3.2' // 추가
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
