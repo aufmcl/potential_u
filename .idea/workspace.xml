@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fb62a72-672a-45be-9348-1b2aa7c7e069" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/add_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
